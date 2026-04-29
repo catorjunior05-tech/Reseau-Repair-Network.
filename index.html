@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Display grid</title>
+	<script src="https://kit.fontawesome.com/61523b4b4d.js"crossorigin-"anonymous"></script>
+    <style>
+        body{
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+         .navbar{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               background: rgb(84, 45, 158);
+               padding: 10px 30px;
+               gap: 50px;
+			   margin: auto;
+         }
+		
+		 
+         .logo img{
+                width: 110px;
+                height: 110px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 5px solid rgba(155, 75, 51, 0.637);
+				cursor: pointer;
+				transition-duration: 0s;
+				
+         }
+		  .logo img:hover{
+			 transform: scale(1.1);
+			 
+		  }
+         .menue{
+             list-style: none;
+             display: flex;
+             gap: 20px;
+			 
+			 
+         }
+		 .menue a{
+			 margin: 10px 25px;
+             text-decoration: none;
+             color: white;
+             font-size: 18px; 
+			 transition: 0.5s;
+         }  
+		   
+         .menue a:hover{
+            color: rgb(176, 219, 20);
+			background-color: rgb(180, 89, 89);
+			padding: 15px;
+			border-radius: 20px;
+			font-weight: bold;
+			
+		 }
+		 	 .btn-header{
+			width: 25%;
+			display: flex;
+			justify-content: end;
+			color: rgb(157, 185, 30);
+			font-size: 15px;
+			
+			}
+			 .btn {
+			     padding: 10px 15px;
+				 background-color: #d5d836;
+				 border-radius: 20px;
+				 font-weight: bold;
+				 position: relative;
+				 right: 30px;
+				 box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+				 transition: 0.5s;
+			 }
+             .btn:hover {
+                       background-color: #f1f1f1 ;
+					   transform: rotate(5deg);
+			 }
+			 .btn i{
+				  margin-right: 5px;
+			 }
+			.span{
+				font-size: 15px;
+			}
+		
+           
+		/* thats area hero */
+        .hero{
+			height:100vh;
+			background-image: url(web3.jpg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			object-fit: cover;
+			
+
+		}
+		.content{
+			text-align: center;
+			color: #f4f4f4f4;
+			background:rgba(0, 0, 0, 0.5);
+			padding: 20px;
+			border: 8px solid transparent;
+			border-radius: 20px;
+			font-size: 20px;
+			
+		}
+		.content:hover{
+                   transform: scale(1.1);
+				   
+		}
+		.hero span{
+			color: #25e613e8;
+	
+		}
+		.services h2{
+			 text-align: center;
+			 color: blue;
+			 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+		}
+		.cards{
+			display: flex;
+			justify-content: center;
+			align-items: stretch;
+			gap: 30px;
+			flex-wrap: wrap;
+			
+		}
+		.card{
+			width: 250px;
+			text-align: center;
+			border: 1px solid white;
+			border-radius: 15px;
+			padding: 15px;
+			background: #e1dde7;
+			align-content: center;
+		}
+		.card img{
+			  width: 100%;
+			  border-radius: 15px;
+		}
+		.gallery{
+			padding: 40px;
+			
+		}
+		.gallery h2{
+			text-align: center;
+			color: #0110af;
+			font-size: 30px;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			
+		}
+		.gallery-grid{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			gap: 10px;
+			
+		}
+		.gallery-grid img{
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+			border-radius: 2rem;
+			
+		}
+		.gallery-grid img:hover{
+			transform: scale(1.1);
+
+		}
+		/*that's for the phone..*/
+		@media(max-width:600px){
+			.navbar{
+				flex-direction: column;
+				gap: 10px;
+				padding: 10px;
+			}
+			.menue{
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+			}
+			.menue a{
+				font-size: 16px;
+				flex-direction: column;
+			}
+			
+			.hero{
+				height: 70vh;
+				padding: 20px;
+			}
+			.btn{
+			flex-direction: column;
+			align-items: center;
+			padding: 5px 10px;
+			 position: relative;
+			 right: 5px;
+				}
+				.btn-header{
+					flex-direction: column;
+				}
+				.content{
+					padding: 15px;
+				}
+				.content h1{
+					font-size: 20px;
+				}
+				.cards{
+					flex-direction: column;
+					align-items: center;
+				}
+				.card{
+					width: 75%;
+					
+				}
+				.gallery-grid{
+					grid-template-columns: 1fr;
+				}
+				.gallery-grid img{
+					width: 100% ;
+				}
+		}
+    </style>
+</head>
+<body>
+      <nav class="navbar">
+        <div class="logo">
+             <img src="logo.JPG" alt="logo">
+        </div>
+        
+        <div class="menue">
+          <li><a href="#">Home</a></li>
+           <li><a href="#">News</a></li>
+           <li><a href="#">contact</a></li>
+           <li><a href="#">About</a></li>
+        </div>
+		<div class="btn-header">
+			<button class="btn">
+		     <i class="fa-solid fa-phone"></i>
+			 <span>Reservation</span>
+			</button>
+		</div>
+      </nav>
+       <!....thats background...>
+	    <section class="hero">
+            <div class="content">
+				<h1>
+					Welcome <span>to my web page</span>
+				</h1>
+				<p>
+					we are learning in <span class="OCONOR">Power Academie</span>
+				</p>
+
+			</div>
+		</section> 
+		<section class="services">
+			  <h2>Services we offer</h2>
+
+			  <div class="cards">
+				  <div class="card">
+                    <img src="https://www.betterteam.com/images/web-developer-job-description-6494x4331-2020128.jpeg?crop=4:3,smart&width=1200&dpr=2&format=pjpg&auto=webp&quality=85" alt="pc">
+					 <h3>Web Developer</h3>
+					 <p>Verified reviews, client ratings, project costs. Find top Website Developers on Clutch.</p>
+				  </div>
+				  <div class="card">
+                    <img src="https://www.nimbletechnocrats.com/wp-content/uploads/2022/12/Web-designer-scaled-1.jpg.optimal.jpg.webp" alt="pc">
+					 <h3>Web Design</h3>
+					 <p>Verified reviews, client ratings, project costs. Find top Website Developers on Clutch.</p>
+				  </div>
+				  <div class="card">
+                    <img src="https://www.workbc.ca/sites/default/files/styles/hero_image/public/NTI5NzE_yO9RrR6SnCrwhNbe-2173-NOC.jpg?itok=IndrtD3C" alt="pc">
+					 <h3>Programing</h3>
+					 <p>Verified reviews, client ratings, project costs. Find top Website Developers on Clutch.</p>
+				  </div>
+				    <div class="card">
+                    <img src="https://media.licdn.com/dms/image/v2/D5612AQEP47QLJu3X-w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1676458393269?e=2147483647&v=beta&t=FSTrGLjM-9cYrXJGVXbCou0JP2FCUw6J5lOJkYKFrCA" alt="pc">
+					 <h3>Database programming</h3>
+					 <p>Verified reviews, client ratings, project costs. Find top Website Developers on Clutch.</p>
+				  </div>
+
+			  </div>
+
+		</section>
+		     <section class="gallery">
+				<h2>Lets take a look!</h2>
+				<div class="gallery-grid">
+                     <img src="https://www.excelsior.edu/wp-content/uploads/2025/01/computer-programming-vs-computer-science-image_blog.jpg" alt="pc">
+					 <img src="https://jessup.edu/wp-content/uploads/2023/12/Programming-in-Computer-Science-NEW.webp" alt="pc">
+                     <img src="https://www.springboard.com/blog/wp-content/uploads/2022/08/programming-skills.png" alt="pc">
+					 <img src="https://images.ctfassets.net/qyg0c6wmz8bn/1sDhu7y8r1Ly6PKAeLvn2C/c99a72274ccd9efe084355120ba5ca6f/programming-coding---study-online-banner.jpeg?w=3840&q=75&fm=webp" alt="pc">
+                     <img src="https://www.theforage.com/blog/wp-content/uploads/2023/03/programming-skills-scaled.jpg" alt="pc">
+					 <img src="https://cdn.shopify.com/s/files/1/0070/5901/3716/files/coding_background.jpg?v=1688538955" alt="pc">
+				</div>
+
+
+			 </section>
+</body>
+</html>
